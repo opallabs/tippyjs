@@ -1,8 +1,8 @@
 {
-  "name": "tippy.js",
+  "name": "@opallabs/tippy.js",
   "version": "2.5.4",
   "description": "Vanilla JS Tooltip Library",
-  "author": "atomiks",
+  "author": "Opal Labs",
   "license": "MIT",
   "keywords": [
     "tooltip",
@@ -12,7 +12,7 @@
   "main": "dist/tippy.all.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atomiks/tippyjs.git"
+    "url": "git+https://github.com/opallabs/tippyjs"
   },
   "scripts": {
     "dev:docs": "parcel website/index.html -d docs/",
@@ -49,6 +49,7 @@
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "caniuse-lite": "^1.0.30000815",
     "cssnano": "^3.10.0",
