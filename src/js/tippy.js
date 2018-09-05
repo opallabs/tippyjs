@@ -20,16 +20,16 @@ let eventListenersBound = false
  * @return {Object}
  */
 function tippy(selector, options, one) {
+  options = { ...defaults, ...options }
+
   if (browser.supported && !eventListenersBound) {
-    bindEventListeners()
+    bindEventListeners(options)
     eventListenersBound = true
   }
 
   if (isObjectLiteral(selector)) {
     polyfillVirtualReferenceProps(selector)
   }
-
-  options = { ...defaults, ...options }
 
   const references = getArrayOfElements(selector)
   const firstReference = references[0]

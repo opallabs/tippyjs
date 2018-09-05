@@ -8,7 +8,7 @@ import toArray from '../utils/toArray'
 /**
  * Adds the needed event listeners
  */
-export default function bindEventListeners() {
+export default function bindEventListeners(options = {}) {
   const onDocumentTouch = () => {
     if (browser.usingTouch) return
 
@@ -95,7 +95,11 @@ export default function bindEventListeners() {
     })
   }
 
-  document.addEventListener('click', onDocumentClick)
+  document.addEventListener(
+    'click',
+    onDocumentClick,
+    options.useCapture || false
+  )
   document.addEventListener('touchstart', onDocumentTouch)
   window.addEventListener('blur', onWindowBlur)
   window.addEventListener('resize', onWindowResize)
